@@ -11,6 +11,7 @@
 		C3ED3A6326675C9300DD8870 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED3A6226675C9300DD8870 /* ContentView.swift */; };
 		C3ED3A6526675C9300DD8870 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3ED3A6426675C9300DD8870 /* Assets.xcassets */; };
 		C3ED3A6826675C9300DD8870 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3ED3A6726675C9300DD8870 /* Preview Assets.xcassets */; };
+		C3ED3A70266764E700DD8870 /* CircleForTrafficLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED3A6F266764E700DD8870 /* CircleForTrafficLight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		C3ED3A6426675C9300DD8870 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3ED3A6726675C9300DD8870 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C3ED3A6926675C9300DD8870 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3ED3A6F266764E700DD8870 /* CircleForTrafficLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleForTrafficLight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				C3ED3A6026675C9200DD8870 /* Traffic_lightApp.swift */,
 				C3ED3A6226675C9300DD8870 /* ContentView.swift */,
+				C3ED3A6F266764E700DD8870 /* CircleForTrafficLight.swift */,
 				C3ED3A6426675C9300DD8870 /* Assets.xcassets */,
 				C3ED3A6926675C9300DD8870 /* Info.plist */,
 				C3ED3A6626675C9300DD8870 /* Preview Content */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3ED3A6326675C9300DD8870 /* ContentView.swift in Sources */,
+				C3ED3A70266764E700DD8870 /* CircleForTrafficLight.swift in Sources */,
 				C3ED3A6126675C9200DD8870 /* Traffic_lightApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
