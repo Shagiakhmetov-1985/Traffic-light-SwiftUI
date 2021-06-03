@@ -12,11 +12,9 @@ enum CurrenLight {
 }
 
 struct ContentView: View {
-    private let lightOff: CGFloat = 0.3
-    private let lightOn: CGFloat = 1
-    @State private var lightRed: CGFloat = 0.3
-    @State private var lightYellow: CGFloat = 0.3
-    @State private var lightGreen: CGFloat = 0.3
+    @State private var lightRed = 0.3
+    @State private var lightYellow = 0.3
+    @State private var lightGreen = 0.3
     @State private var currentLight = CurrenLight.red
     @State private var textButton = "Start"
     
@@ -25,9 +23,9 @@ struct ContentView: View {
             Color(.black)
                 .ignoresSafeArea()
             VStack {
-                CircleForTrafficLight(color: Color(CGColor(red: 246/255, green: 14/255, blue: 34/255, alpha: lightRed)))
-                CircleForTrafficLight(color: Color(CGColor(red: 238/255, green: 220/255, blue: 13/255, alpha: lightYellow)))
-                CircleForTrafficLight(color: Color(CGColor(red: 52/255, green: 230/255, blue: 12/255, alpha: lightGreen)))
+                CircleForTrafficLight(color: .red, opacity: lightRed)
+                CircleForTrafficLight(color: .yellow, opacity: lightYellow)
+                CircleForTrafficLight(color: .green, opacity: lightGreen)
                 
                 Spacer()
                     .frame(height: 100)
@@ -40,26 +38,7 @@ struct ContentView: View {
     }
     
     private var setupButton: some View {
-        Button(action: {
-            if textButton == "Start" {
-                textButton = "Next"
-            }
-            
-            switch currentLight {
-            case .red:
-                lightRed = lightOn
-                lightGreen = lightOff
-                currentLight = .yellow
-            case .yellow:
-                lightYellow = lightOn
-                lightRed = lightOff
-                currentLight = .green
-            default:
-                lightGreen = lightOn
-                lightYellow = lightOff
-                currentLight = .red
-            }
-        }) {
+        Button(action: checkLight) {
             Text(textButton)
                 .font(.system(size: 30))
                 .frame(width: 200, height: 50)
@@ -70,12 +49,34 @@ struct ContentView: View {
                 .shadow(radius: 20)
         }
     }
+    
+    private func checkLight() {
+        let lightOn: Double = 1
+        let lightOff: Double = 0.3
+        
+        if textButton == "Start" {
+            textButton = "Next"
+        }
+        
+            switch currentLight {
+            case .red:
+                lightRed = lightOn
+                lightGreen = lightOff
+                currentLight = .yellow
+            case .yellow:
+                lightYellow = lightOn
+                lightRed = lightOff
+                currentLight = .green
+            case .green:
+                lightGreen = lightOn
+                lightYellow = lightOff
+                currentLight = .red
+            }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            ContentView()
-        }
+        ContentView()
     }
 }
