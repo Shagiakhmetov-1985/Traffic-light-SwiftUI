@@ -8,34 +8,20 @@
 import SwiftUI
 
 enum CurrenLight {
-    case red, yellow, green
+    case start, red, yellow, green
 }
 
 struct ContentView: View {
-    @State private var lightRed = 0.3
-    @State private var lightYellow = 0.3
-    @State private var lightGreen = 0.3
-    @State private var currentLight = CurrenLight.red
+    @State private var currentLight = CurrenLight.start
     @State private var textButton = "Start"
     
     private func checkLight() {
-        let lightOn: Double = 1
-        let lightOff: Double = 0.3
-        
-            switch currentLight {
-            case .red:
-                lightRed = lightOn
-                lightGreen = lightOff
-                currentLight = .yellow
-            case .yellow:
-                lightYellow = lightOn
-                lightRed = lightOff
-                currentLight = .green
-            case .green:
-                lightGreen = lightOn
-                lightYellow = lightOff
-                currentLight = .red
-            }
+        switch currentLight {
+        case .start: currentLight = .red
+        case .red: currentLight = .yellow
+        case .yellow: currentLight = .green
+        case .green: currentLight = .red
+        }
     }
 }
 
@@ -45,9 +31,9 @@ extension ContentView {
             Color(.black)
                 .ignoresSafeArea()
             VStack(spacing: 15) {
-                CircleForTrafficLight(color: .red, opacity: lightRed)
-                CircleForTrafficLight(color: .yellow, opacity: lightYellow)
-                CircleForTrafficLight(color: .green, opacity: lightGreen)
+                CircleForTrafficLight(color: .red, opacity: currentLight == .red ? 1 : 0.3)
+                CircleForTrafficLight(color: .yellow, opacity: currentLight == .yellow ? 1 : 0.3)
+                CircleForTrafficLight(color: .green, opacity: currentLight == .green ? 1 : 0.3)
                 
                 Spacer()
                 
@@ -61,7 +47,6 @@ extension ContentView {
         }
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
