@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3917161266A0DCB00739837 /* ButtonForTrafficLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3917160266A0DCB00739837 /* ButtonForTrafficLight.swift */; };
 		C3ED3A6126675C9200DD8870 /* Traffic_lightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED3A6026675C9200DD8870 /* Traffic_lightApp.swift */; };
 		C3ED3A6326675C9300DD8870 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED3A6226675C9300DD8870 /* ContentView.swift */; };
 		C3ED3A6526675C9300DD8870 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3ED3A6426675C9300DD8870 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C3917160266A0DCB00739837 /* ButtonForTrafficLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonForTrafficLight.swift; sourceTree = "<group>"; };
 		C3ED3A5D26675C9200DD8870 /* Traffic light.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Traffic light.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3ED3A6026675C9200DD8870 /* Traffic_lightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traffic_lightApp.swift; sourceTree = "<group>"; };
 		C3ED3A6226675C9300DD8870 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				C3ED3A6026675C9200DD8870 /* Traffic_lightApp.swift */,
 				C3ED3A6226675C9300DD8870 /* ContentView.swift */,
 				C3ED3A6F266764E700DD8870 /* CircleForTrafficLight.swift */,
+				C3917160266A0DCB00739837 /* ButtonForTrafficLight.swift */,
 				C3ED3A6426675C9300DD8870 /* Assets.xcassets */,
 				C3ED3A6926675C9300DD8870 /* Info.plist */,
 				C3ED3A6626675C9300DD8870 /* Preview Content */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3917161266A0DCB00739837 /* ButtonForTrafficLight.swift in Sources */,
 				C3ED3A6326675C9300DD8870 /* ContentView.swift in Sources */,
 				C3ED3A70266764E700DD8870 /* CircleForTrafficLight.swift in Sources */,
 				C3ED3A6126675C9200DD8870 /* Traffic_lightApp.swift in Sources */,
