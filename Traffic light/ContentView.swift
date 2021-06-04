@@ -22,20 +22,20 @@ struct ContentView: View {
         let lightOn: Double = 1
         let lightOff: Double = 0.3
         
-            switch currentLight {
-            case .red:
-                lightRed = lightOn
-                lightGreen = lightOff
-                currentLight = .yellow
-            case .yellow:
-                lightYellow = lightOn
-                lightRed = lightOff
-                currentLight = .green
-            case .green:
-                lightGreen = lightOn
-                lightYellow = lightOff
-                currentLight = .red
-            }
+        switch currentLight {
+        case .red:
+            lightRed = lightOn
+            lightGreen = lightOff
+            currentLight = .yellow
+        case .yellow:
+            lightYellow = lightOn
+            lightRed = lightOff
+            currentLight = .green
+        case .green:
+            lightGreen = lightOn
+            lightYellow = lightOff
+            currentLight = .red
+        }
     }
 }
 
